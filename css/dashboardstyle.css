@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+body{
+    background-color: #123456;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color:aquamarine;
+}
+
+/*header*/
+header{
+    position: relative;
+    padding: 0 2rem;
+    background: linear-gradient(90deg, #99CFF9 3.92%, #578CB6 38.07%, #0E3F66 76.6%);
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img{
+    width: 50%;
+}
+
+.navbar .link{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: #ffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn img{
+    width: 65%;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.action_btn img:hover{
+    transform: scale(1.1);
+
+}
+
+/* dropdown user */
+.dropdown_user{
+    display:block;
+    margin-top: 0.3rem;
+    position: absolute;
+    right: 10rem;
+    top: 60px;
+    height: 0;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_user .logout, .dropdown_icon {
+    background-color: #123456;
+        color: #ffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+}
+
+.dropdown_user.open{
+    height: 248px;
+}
+
+.dropdown_user li{
+    padding:  0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* dropdown*/
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.5 );
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+
+    height: 300px;
+}
+
+.dropdown_menu li{
+    padding:  0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* table */
+.wrapper-invoice {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper-invoice .invoice {
+    height: auto;
+    background: #fff;
+    padding: 5vh;
+    margin-top: 5vh;
+    max-width: 110vh;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+
+  .wrapper-invoice .invoice .invoice-information {
+    float: right;
+    text-align: right;
+  }
+
+  .wrapper-invoice .invoice .invoice-information b {
+    color: "#0F172A";
+  }
+
+  .wrapper-invoice .invoice .invoice-information p {
+    font-size: 2vh;
+    color: gray;
+  }
+
+  .wrapper-invoice .invoice .invoice-logo-brand h2 {
+    text-transform: uppercase;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 2.9vh;
+    color: "#0F172A";
+  }
+
+  .wrapper-invoice .invoice .invoice-logo-brand img {
+    max-width: 100px;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .wrapper-invoice .invoice .invoice-head {
+    display: flex;
+    margin-top: 8vh;
+  }
+
+  .wrapper-invoice .invoice .invoice-head .head {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .wrapper-invoice .invoice .invoice-head .client-info {
+    text-align: left;
+  }
+
+  .wrapper-invoice .invoice .invoice-head .client-info h2 {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-size: 2vh;
+    color: "#0F172A";
+  }
+
+  .wrapper-invoice .invoice .invoice-head .client-info p {
+    font-size: 2vh;
+    color: gray;
+  }
+
+  .wrapper-invoice .invoice .invoice-head .client-data {
+    text-align: right;
+  }
+
+  .wrapper-invoice .invoice .invoice-head .client-data h2 {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-size: 2vh;
+    color: "#0F172A";
+  }
+
+  .wrapper-invoice .invoice .invoice-head .client-data p {
+    font-size: 2vh;
+    color: gray;
+  }
+
+  .wrapper-invoice .invoice .invoice-body {
+    margin-top: 8vh;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .table thead tr th {
+    font-size: 2vh;
+    border: 1px solid #dcdcdc;
+    text-align: left;
+    padding: 1vh;
+    background-color: #eeeeee;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .table tbody tr td {
+    font-size: 2vh;
+    border: 1px solid #dcdcdc;
+    text-align: left;
+    padding: 1vh;
+    background-color: #fff;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .table tbody tr td:nth-child(2) {
+    text-align: right;
+  }
+  
+  .wrapper-invoice .invoice .invoice-body .flex-table {
+    display: flex;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .flex-table .flex-column {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .flex-table .flex-column .table-subtotal {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 2vh;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .flex-table .flex-column .table-subtotal tbody tr td {
+    font-size: 2vh;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: left;
+    padding: 1vh;
+    background-color: #fff;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .flex-table .flex-column .table-subtotal tbody tr td:nth-child(2) {
+    text-align: right;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .invoice-total-amount {
+    margin-top: 1rem;
+  }
+
+  .wrapper-invoice .invoice .invoice-body .invoice-total-amount p {
+    font-weight: bold;
+    color: "#0F172A";
+    text-align: right;
+    font-size: 2vh;
+  }
+
+  .wrapper-invoice .invoice .invoice-footer {
+    margin-top: 4vh;
+  }
+
+  .wrapper-invoice .invoice .invoice-footer p {
+    font-size: 1.7vh;
+    color: gray;
+  }
+  
+  @media print {
+    .table thead tr th {
+      background-color: #eeeeee !important;
+    }
+  
+    .copyright {
+      display: none;
+    }
+  }
+  .rtl {
+    direction: rtl;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .rtl .invoice-information {
+    float: left !important;
+    text-align: left !important;
+  }
+  .rtl .invoice-head .client-info {
+    text-align: right !important;
+  }
+  .rtl .invoice-head .client-data {
+    text-align: left !important;
+  }
+  .rtl .invoice-body .table thead tr th {
+    text-align: right !important;
+  }
+  .rtl .invoice-body .table tbody tr td {
+    text-align: right !important;
+  }
+  .rtl .invoice-body .table tbody tr td:nth-child(2) {
+    text-align: left !important;
+  }
+  .rtl .invoice-body .flex-table .flex-column .table-subtotal tbody tr td {
+    text-align: right !important;
+  }
+  .rtl .invoice-body .flex-table .flex-column .table-subtotal tbody tr td:nth-child(2) {
+    text-align: left !important;
+  }
+  .rtl .invoice-body .invoice-total-amount p {
+    text-align: left !important;
+  }
+
+/* responsive nav*/
+@media(max-width: 1284px){
+    .dropdown_user{
+        right: 0.7rem;
+    }
+}
+
+@media(max-width: 992px){
+    .navbar{
+        background: none;
+    }
+    .navbar .link,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+        margin-top: 0.3rem;
+    }
+
+    .dropdown_menu .logout{
+        background-color: #123456;
+        color: #ffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+    }
+    
+    .dropdown_user{
+        display: none;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    .bill_table .title{
+        font-size: 10px;
+    }
+}

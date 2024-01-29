@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGU - Oas Water System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<style> @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap'); </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+        <nav>
+            <div class="icon">
+            <a href="index.html"><img src="images/logo.png"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a class="action_btn"><img src="images/user.png" ></a></li>     
+                </ul>
+                </div>
+                <div class="dropdown_user">
+                    <li><a href="signup.html" class="login">Sign up</a></li>
+                    <li><a href="login.html" class="login">Log In</a></li>
+                </div>
+        </nav>
+    <div class="text-box" id="text-box">
+        <h1>LGU - Oas Water System</h1>
+        <p>Billing Service-Application</p>
+       <br>
+        <a href="staff_info.html" class="about-know">Visit Us To Know More</a>
+    </div>
+    <script>
+        const actionBtn = document.querySelector('.action_btn')
+        const dropDownUser = document.querySelector('.dropdown_user')
+
+        actionBtn.onclick = function(){
+            dropDownUser.classList.toggle('open')
+            const isOpen = dropDownUser.classList.contains('open')
+        }
+    </script>
+</body>
+</html>

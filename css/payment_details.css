@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+body{
+    background-color: #123456;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color:aquamarine;
+}
+
+/*header*/
+header{
+    position: relative;
+    padding: 0 2rem;
+    background: linear-gradient(90deg, #99CFF9 3.92%, #578CB6 38.07%, #0E3F66 76.6%);
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img{
+    width: 50%;
+}
+
+.navbar .link{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: #ffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn img{
+    width: 65%;
+    padding: 0.5rem 1rem;
+}
+
+/* dropdown user */
+.dropdown_user{
+    display:block;
+    margin-top: 0.3rem;
+    position: absolute;
+    right: 10rem;
+    top: 60px;
+    height: 0;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_user .logout{
+    background-color: #123456;
+        color: #ffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+}
+
+.dropdown_user.open{
+    height: 248px;
+}
+
+.dropdown_user li{
+    padding:  0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* dropdown*/
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+
+    height: 248px;
+}
+
+.dropdown_menu li{
+    padding:  0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* responsive nav*/
+@media(max-width: 1284px){
+    .dropdown_user{
+        right: 0.7rem;
+    }
+}
+
+@media(max-width: 992px){
+    .navbar{
+        background: none;
+    }
+    .navbar .link,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+        margin-top: 0.3rem;
+    }
+
+    .dropdown_menu .logout{
+        background-color: #123456;
+        color: #ffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+    }
+    
+    .dropdown_user{
+        display: none;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+.container{
+    margin: 3% auto;
+    width: 90%;
+    background-color: #BADEFB;
+    padding: 1% 5%;
+    border-radius: 29px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+    color: #232836;
+    text-align: left;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.container .body{
+    color: #578CB6;
+    display: flex;
+}
+.social-logo{
+    display: flex;
+    margin: 5% 0 5% 3%;
+    border: 2px;
+   border-radius: 15px;
+}
+.social-logo p{
+    color: #fff;
+}
+.container .social-logo img{
+    width: 30%; 
+    display: block;
+    margin-left: 30%;
+}
+.container .social-logo p{
+    margin-left: 5%;
+}
+.container .social-logo .left{
+    padding-right: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.container .social-logo a{
+    border: none;
+    border-radius: 15px;
+    background: #578CB6 ;
+    margin-bottom: 15%;
+}
+.container .social-logo .right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%; 
+}
+
+@media(max-width: 600px){
+    .social-logo p{
+        font-size: 10px;
+    }
+
+}

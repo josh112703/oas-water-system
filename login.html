@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+            <div class="form-content">
+                <header>Login</header>
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password">
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button id="redirectButton">Login</button>
+                        <script>
+                            document.getElementById("redirectButton").addEventListener("click", function() {
+                              window.location.href = 'dashboard.html'; 
+                            });
+                          </script>
+                    </div>
+
+                <div class="form-link">
+                    <p>Don't have an account? <a href="signup.html" class="link signup-link">Signup</a></p>
+                </div>
+            </div>
+    </div>
+    <div class="des">
+        <h1>Welcome to
+            LGU - Oas Water System</h1>
+    </div>
+</body>
+</html>

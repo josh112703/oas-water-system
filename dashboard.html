@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/dashboardstyle.css">
+    <title>Dashboard</title>
+</head>
+<body>
+      <!-- Code for nav -->
+    <header>
+        <div class="navbar">
+            <div class="logo"> <a href="dashboard.html"><img src="images/logo.png" alt=""></a></div>
+            <ul class="link">
+                <li><a href="payment-history.html">Payment History</a></li>
+                <li><a href="payment-history.html">Payment Details</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="staff_info.html">Staff Info</a></li>
+            </ul>
+            <a href="#" class="action_btn"><img src="images/user.png" alt=""></a>
+            <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+        <div class="dropdown_user">
+            <li><a href="profile.html">User Settings</a></li>
+            <li><a href="index.html" class="logout">Log Out</a></li>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="payment-history.html" class="dropdown_icon">Payment History</a></li>
+            <li><a href="payment-history.html" class="dropdown_icon">Payment Details</a></li>
+            <li><a href="feedback.html" class="dropdown_icon">Feedback</a></li>
+            <li><a href="profile.html" class="dropdown_icon">User Settings</a></li>
+            <li><a href="staff_info.html">Staff Info</a></li>
+            <li><a href="index.html" class="logout">Log Out</a></li>
+        </div>
+    </header>
+     <!-- Code for Table -->
+     <section class="wrapper-invoice">
+        <div class="invoice">
+          <div class="invoice-information">
+            <p><b>Invoice #</b> : 12345</p>
+            <p><b>Created Date </b>: Dec 17, 2023</p>
+            <p><b>Due Date</b> : Jan 17, 2024</p>
+          </div>
+          <div class="invoice-logo-brand">
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <!-- invoice head -->
+          <div class="invoice-head">
+            <div class="head client-info">
+              <p>Oas Water District</p>
+              <p>Oas Municipal Hall Building, Ilaor Sur, Oas, Albay</p>
+              <p>4505 Oas, Philippines</p>
+            </div>
+            <div class="head client-data">
+              <p><br></p>
+              <p>Joshua Rico Oasian</p>
+              <p>Austero Street, Iraya Sur</p>
+              <p>Oas, Albay</p>
+            </div>
+          </div>
+          <!-- invoice body-->
+          <div class="invoice-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Service Description</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Water Usage</td>
+                  <td>Php 1280.00</td>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <td>Php 20.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="flex-table">
+              <div class="flex-column"></div>
+              <div class="flex-column">
+                <table class="table-subtotal">
+                  <tbody>
+                    <tr>
+                      <td>Subtotal</td>
+                      <td>Php1300.00</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- invoice total  -->
+            <div class="invoice-total-amount">
+              <p>Total : Php1300.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <script>
+        const actionBtn = document.querySelector('.action_btn')
+        const dropDownUser = document.querySelector('.dropdown_user')
+
+        actionBtn.onclick = function(){
+            dropDownUser.classList.toggle('open')
+            const isOpen = dropDownUser.classList.contains('open')
+        }
+
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+     </script>
+</body>
+</html>
